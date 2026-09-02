@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — Gmail MCP (personal)</title>
+<style>
+body{font:16px/1.65 system-ui,sans-serif;max-width:44rem;margin:3rem auto;padding:0 1.25rem;color:#1a1a1a}
+h1{font-size:1.6rem} h2{font-size:1.1rem;margin-top:2rem}
+.sub{color:#666} code{background:#f4f4f5;padding:.1em .35em;border-radius:3px;font-size:.9em}
+a{color:#0b57d0} ul{padding-left:1.25rem}
+</style></head><body>
+<h1>Privacy Policy</h1>
+<p class="sub">Gmail MCP (personal) — last updated 2 September 2026</p>
+
+<h2>Scope of this policy</h2>
+<p>Gmail MCP (personal) is a self-hosted application operated by a single
+individual for their own Google accounts. It is not offered to the public and has
+no users other than its operator.</p>
+
+<h2>Google user data accessed</h2>
+<p>The application requests the following Google OAuth scope:</p>
+<ul>
+  <li><code>https://www.googleapis.com/auth/gmail.readonly</code> — read-only access
+      to Gmail messages, threads, labels and settings.</li>
+</ul>
+<p>This scope permits reading mail only. The application cannot send, modify or
+delete messages.</p>
+
+<h2>How the data is used</h2>
+<p>Message content and metadata are read on demand so that the operator can search,
+triage and summarise their own inboxes. Data is processed transiently to answer the
+operator's request.</p>
+
+<h2>Storage and retention</h2>
+<p>OAuth tokens are stored on the operator's own computer in a directory readable
+only by the operator's user account (file mode 0600). No message content is stored
+in any database. Revoking access at
+<a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>
+and deleting the local token files removes all access.</p>
+
+<h2>Sharing and transfer</h2>
+<p>Google user data is not sold, transferred or disclosed to any third party. There
+is no hosted backend, no analytics and no telemetry. Data does not leave the
+operator's machine except in requests to Google's own APIs.</p>
+
+<h2>Limited Use disclosure</h2>
+<p>This application's use and transfer of information received from Google APIs
+adheres to the
+<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+including the Limited Use requirements.</p>
+
+<h2>Contact</h2>
+<p>Via <a href="https://github.com/Z3l20/gmail-mcp/issues">GitHub issues</a> on this project.</p>
+</body></html>

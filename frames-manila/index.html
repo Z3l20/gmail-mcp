@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Frames Manila tools</title>
+<style>
+body{font:16px/1.65 system-ui,sans-serif;max-width:44rem;margin:3rem auto;padding:0 1.25rem;color:#1a1a1a}
+h1{font-size:1.6rem;margin-bottom:.25rem} h2{font-size:1.1rem;margin-top:2rem}
+.sub{color:#666;margin-top:0} code{background:#f4f4f5;padding:.1em .35em;border-radius:3px;font-size:.9em}
+a{color:#0b57d0} ul{padding-left:1.25rem}
+</style></head><body>
+<h1>Frames Manila tools</h1>
+<p class="sub">Private, self-hosted tools for running one small business.</p>
+
+<h2>What this application does</h2>
+<p>Frames Manila tools are scripts and a local server that the owner of Frames
+Manila runs on his own computer. They read the shop's order log in Google
+Sheets and the shop's own Gmail inbox, so that the owner and the AI assistants
+he uses can look up orders and correspondence. It is not a product, is not
+distributed, and has no users other than the owner and his own shop
+account.</p>
+
+<h2>How it works</h2>
+<ul>
+<li>Runs as local processes on the owner's computer. The Gmail server listens
+only on localhost.</li>
+<li>Signs in to Google with OAuth 2.0. Tokens are stored on that computer,
+readable only by the owner's user account.</li>
+<li>Reads data on request. There is no hosted backend, no analytics and no
+telemetry.</li>
+</ul>
+
+<h2>Google account data used</h2>
+<ul>
+<li><code>gmail.readonly</code>: read the shop's mail. It cannot send, change
+or delete anything.</li>
+<li><code>spreadsheets.readonly</code>: read the order log spreadsheet.</li>
+<li><code>drive.file</code>: create and edit only files this application
+created.</li>
+</ul>
+
+<p><a href="privacy.html">Privacy policy</a></p>
+</body></html>

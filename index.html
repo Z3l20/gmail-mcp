@@ -9,25 +9,28 @@ h1{font-size:1.6rem;margin-bottom:.25rem} h2{font-size:1.1rem;margin-top:2rem}
 a{color:#0b57d0} ul{padding-left:1.25rem}
 </style></head><body>
 <h1>Gmail MCP (personal)</h1>
-<p class="sub">A single-user, self-hosted tool for reading my own Gmail accounts.</p>
+<p class="sub">A single-user, self-hosted tool for reading my own Google account.</p>
 
 <h2>What this application does</h2>
-<p>Gmail MCP is a personal, self-hosted server that lets an AI assistant read and
-summarise messages across the Gmail accounts belonging to its operator. It runs
-locally on the operator's own computer. It is not a product, not distributed, and
-has no users other than its operator.</p>
+<p>Gmail MCP is a personal, self-hosted server that lets AI assistants on its
+operator's own computers read and summarise the operator's Gmail, and work with
+the operator's Google Drive and Calendar. It is not a product, not distributed,
+and has no users other than its operator.</p>
 
 <h2>How it works</h2>
 <ul>
-  <li>Runs as a local process on the operator's machine and listens only on <code>localhost</code>.</li>
-  <li>Authenticates to Gmail with Google OAuth 2.0. Tokens are stored locally on that machine.</li>
-  <li>Reads message metadata and content on request in order to search and summarise it.</li>
-  <li>Sends no data to any third party. There is no hosted backend and no analytics.</li>
+  <li>Runs as local processes on the operator's machines and listens only on <code>localhost</code>.</li>
+  <li>Authenticates with Google OAuth 2.0. Tokens are stored locally on those machines.</li>
+  <li>Reads data on request in order to search and summarise it.</li>
+  <li>Data an AI assistant reads goes to the AI model provider that runs it, to answer the operator's request. There is no hosted backend and no analytics.</li>
 </ul>
 
 <h2>Google account data used</h2>
-<p>The application requests the <code>gmail.readonly</code> scope. Read-only access
-is sufficient for its purpose; it does not send, modify, or delete mail.</p>
+<ul>
+  <li><code>gmail.readonly</code>: read mail. It cannot send, change or delete anything.</li>
+  <li><code>drive</code>, <code>drive.readonly</code> and <code>drive.file</code>, through a separate client: read and edit Drive files.</li>
+  <li><code>calendar</code>, <code>calendar.events</code> and <code>calendar.readonly</code>, through the same separate client: read and edit calendars.</li>
+</ul>
 
 <h2>Privacy</h2>
 <p>See the <a href="privacy.html">Privacy Policy</a>.</p>
